@@ -1,10 +1,49 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import { clientLogos } from '@/lib/constants';
 
+function MagnifiedLogo({
+  logo,
+  index,
+  mouseX
+}: {
+  logo: { src: string; alt: string };
+  index: number;
+  mouseX: any;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const distance = useTransform(mouseX, (val: number) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+    return val - bounds.x - bounds.width / 2;
+  });
+
+  const widthSync = useTransform(distance, [-200, 0, 200], [70, 110, 70]);
+  const width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{ width, height: width }}
+      className="clients__logo-wrapper"
+    >
+      <Image
+        src={logo.src}
+        alt={logo.alt}
+        width={180}
+        height={110}
+        className="clients__logo"
+        style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+      />
+    </motion.div>
+  );
+}
+
 export function ClientLogos() {
+  const mouseX = useMotionValue(Infinity);
   // Duplicate logos for infinite scroll effect
   const allLogos = [...clientLogos, ...clientLogos];
 
@@ -22,29 +61,31 @@ export function ClientLogos() {
         </motion.p>
       </div>
 
-      <div className="clients__wrapper" style={{ overflow: 'hidden' }}>
+      <motion.div
+        className="clients__wrapper"
+        style={{ overflow: 'hidden' }}
+        onMouseMove={(e) => mouseX.set(e.pageX)}
+        onMouseLeave={() => mouseX.set(Infinity)}
+      >
         <motion.div
           className="clients__track"
           animate={{ x: ['0%', '-50%'] }}
           transition={{
-            duration: 30,
+            duration: 40,
             repeat: Infinity,
             ease: 'linear',
           }}
         >
           {allLogos.map((logo, index) => (
-            <Image
+            <MagnifiedLogo
               key={`${logo.alt}-${index}`}
-              src={logo.src}
-              alt={logo.alt}
-              width={180}
-              height={70}
-              className="clients__logo"
-              style={{ objectFit: 'contain' }}
+              logo={logo}
+              index={index}
+              mouseX={mouseX}
             />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

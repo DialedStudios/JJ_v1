@@ -4,8 +4,8 @@ export const colors = {
   surface: '#12151c',
   text: '#f5f6f8',
   muted: '#aeb7c4',
-  accent: '#c8ff6e',
-  accentStrong: '#7bf0c6',
+  accent: '#13D8FA',
+  accentStrong: '#0bb8d6',
   divider: '#1f242d',
 };
 
