@@ -11,7 +11,7 @@ export default function HomePage() {
       <PulseAccent />
 
       <Hero
-        eyebrow="DIALED STUDIOS"
+        eyebrow=""
         heading="We make products look legendary."
         subheading="Social campaigns and product commercials for DTC and e-commerce brands. Content that stops the scroll and moves the needle."
         primaryCta={{ label: 'See pricing', href: '/pricing' }}

@@ -14,14 +14,16 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="hero container">
-      <motion.div
-        className="hero__eyebrow"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        {eyebrow}
-      </motion.div>
+      {eyebrow && (
+        <motion.div
+          className="hero__eyebrow"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          {eyebrow}
+        </motion.div>
+      )}
 
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
