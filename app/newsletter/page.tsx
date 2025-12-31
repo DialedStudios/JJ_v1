@@ -5,21 +5,21 @@ import { PulseAccent } from '@/components/animations/PulseAccent';
 
 export const metadata = {
   title: 'Newsletter — Dialed Studios',
-  description: 'Get launch notes, design breakdowns, and first dibs on new drops. Zero noise—only the signals.',
+  description: 'Behind-the-scenes breakdowns, campaign insights, and first dibs on open production slots.',
 };
 
 const newsletterFeatures = [
   {
-    title: 'Launch playbook',
-    body: 'Behind-the-scenes breakdowns of how we ship sites in 72 hours without cutting corners.',
+    title: 'Campaign breakdowns',
+    body: 'Behind-the-scenes looks at how we concept, shoot, and deliver content that converts.',
   },
   {
-    title: 'Motion recipes',
-    body: 'Copy-paste code snippets for scroll animations, hover effects, and micro-interactions.',
+    title: 'Production insights',
+    body: 'Tips on lighting, gear, and workflows that make shoots efficient without sacrificing quality.',
   },
   {
-    title: 'Signal over noise',
-    body: 'Curated design inspiration, tool recommendations, and industry insights—no fluff.',
+    title: 'Early access',
+    body: 'Be first to know when we have open slots and new service offerings.',
   },
 ];
 
@@ -31,7 +31,7 @@ export default function NewsletterPage() {
       <Hero
         eyebrow="NEWSLETTER"
         heading="The Dialed Dispatch"
-        subheading="Design breakdowns, launch playbooks, and early access—delivered to your inbox. Zero noise, only the signals that matter."
+        subheading="Campaign breakdowns, production insights, and early access to open slots—delivered to your inbox. Zero noise, only signal."
         primaryCta={{ label: 'Subscribe below', href: '#subscribe' }}
         secondaryCta={{ label: 'See pricing', href: '/pricing' }}
       />

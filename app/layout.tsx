@@ -5,14 +5,14 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Dialed Studios — Digital experiences, dialed in',
+  title: 'Dialed Studios — We make products look legendary',
   description:
-    'Apple-level clarity, centered layouts, and motion that whispers. We design and build brand-defining web moments for teams that care about every detail.',
-  keywords: ['design studio', 'web design', 'brand identity', 'digital experiences'],
+    'Social campaigns and product commercials for DTC and e-commerce brands. Content that stops the scroll and moves the needle.',
+  keywords: ['product commercials', 'social campaigns', 'DTC', 'e-commerce', 'video production', 'content creation'],
   authors: [{ name: 'Dialed Studios' }],
   openGraph: {
-    title: 'Dialed Studios — Digital experiences, dialed in',
-    description: 'We design and build brand-defining web moments for teams that care about every detail.',
+    title: 'Dialed Studios — We make products look legendary',
+    description: 'Social campaigns and product commercials for DTC and e-commerce brands.',
     type: 'website',
     locale: 'en_US',
   },

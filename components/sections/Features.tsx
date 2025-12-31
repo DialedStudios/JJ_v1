@@ -21,15 +21,15 @@ export function Features({ section, title, description }: FeaturesProps) {
   const items: FeatureItem[] = section === 'services' ? services : signatureMoves;
 
   const defaultTitles = {
-    services: 'What we make',
-    signature: 'Signature moves',
+    services: 'What we do',
+    signature: 'How we work',
   };
 
   const defaultDescriptions = {
     services:
-      'Signature sites that move with intent—crafted for founders, creatives, and teams who care about every pixel and every word.',
+      'End-to-end production for brands that need content that converts. From concept to delivery, we handle it all.',
     signature:
-      'Clean hierarchy, intentional spacing, and gradients that breathe—everything centered around a single feeling: Dialed.',
+      'We keep it simple, intentional, and focused on results. No fluff, no wasted frames—just content that performs.',
   };
 
   return (

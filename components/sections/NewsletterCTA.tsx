@@ -10,7 +10,7 @@ interface NewsletterCTAProps {
 
 export function NewsletterCTA({
   headline = 'Stay Dialed.',
-  copy = "Get launch notes, design breakdowns, and first dibs on new drops. Zero noise—only the signals.",
+  copy = "Campaign breakdowns, production tips, and early access to open slots. Zero noise—only signal.",
 }: NewsletterCTAProps) {
   return (
     <section className="container newsletter">

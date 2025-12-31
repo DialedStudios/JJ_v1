@@ -12,22 +12,22 @@ export default function HomePage() {
 
       <Hero
         eyebrow="DIALED STUDIOS"
-        heading="Digital experiences that feel inevitable."
-        subheading="Apple-level clarity, centered layouts, and motion that whispers. We design and build brand-defining web moments for teams that care about every detail."
+        heading="We make products look legendary."
+        subheading="Social campaigns and product commercials for DTC and e-commerce brands. Content that stops the scroll and moves the needle."
         primaryCta={{ label: 'See pricing', href: '/pricing' }}
-        secondaryCta={{ label: 'Join the insider list', href: '/newsletter' }}
+        secondaryCta={{ label: 'Get in touch', href: 'mailto:hello@dialedstudios.com' }}
         stats={[
           {
-            label: '72-hour',
-            description: 'Launch windows for sites that need to ship yesterday.',
+            label: 'DTC-focused',
+            description: 'Built for brands that sell direct and scale fast.',
           },
           {
-            label: 'Performance-first',
-            description: 'Built to load fast, feel fast, and stay fast.',
+            label: 'Platform-ready',
+            description: 'Optimized for TikTok, Meta, YouTube, and beyond.',
           },
           {
-            label: 'Apple-level copy',
-            description: 'Crisp headlines that read like a keynote.',
+            label: 'Conversion-driven',
+            description: 'Every frame engineered to drive action.',
           },
         ]}
       />

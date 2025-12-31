@@ -6,7 +6,7 @@ import { PulseAccent } from '@/components/animations/PulseAccent';
 
 export const metadata = {
   title: 'Pricing — Dialed Studios',
-  description: 'Transparent pricing for brand-defining web experiences. From single-page launches to full-scale builds.',
+  description: 'Transparent pricing for social campaigns and product commercials. Content packages built for DTC brands.',
 };
 
 export default function PricingPage() {
@@ -16,10 +16,10 @@ export default function PricingPage() {
 
       <Hero
         eyebrow="PRICING"
-        heading="Pick the tempo. We keep it dialed."
-        subheading="Transparent pricing, no surprises. Every tier includes our signature attention to detail and Apple-level craft."
+        heading="Content packages that scale with you."
+        subheading="Transparent pricing, no surprises. From single campaigns to ongoing partnerships—we've got a tier that fits."
         primaryCta={{ label: 'Get started', href: 'mailto:hello@dialedstudios.com' }}
-        secondaryCta={{ label: 'See our work', href: '/' }}
+        secondaryCta={{ label: 'View our work', href: '/' }}
       />
 
       <PricingGrid />
@@ -27,12 +27,12 @@ export default function PricingPage() {
       <Features
         section="signature"
         title="Why Dialed"
-        description="We're not just another agency. We're the team that obsesses over every pixel so you don't have to."
+        description="We're not just another production company. We're the team that obsesses over every frame so your product looks undeniable."
       />
 
       <NewsletterCTA
         headline="Still thinking?"
-        copy="Join our newsletter for design insights, launch playbooks, and exclusive early access to new offerings."
+        copy="Join our list for production insights, campaign breakdowns, and early access to open slots."
       />
     </main>
   );
