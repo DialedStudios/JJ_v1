@@ -32,13 +32,13 @@ export default function HomePage() {
         ]}
       />
 
+      <ClientLogos />
+
       <Features section="services" />
 
       <Features section="signature" />
 
       <FounderBio />
-
-      <ClientLogos />
 
       <NewsletterCTA />
     </main>

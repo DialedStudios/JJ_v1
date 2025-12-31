@@ -37,8 +37,8 @@ export function ClientLogos() {
               key={`${logo.alt}-${index}`}
               src={logo.src}
               alt={logo.alt}
-              width={120}
-              height={40}
+              width={180}
+              height={70}
               className="clients__logo"
               style={{ objectFit: 'contain' }}
             />
