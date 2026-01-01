@@ -36,6 +36,7 @@ export const clientLogos = [
 
 export const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/work', label: 'Work' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/newsletter', label: 'Newsletter' },
 ];
