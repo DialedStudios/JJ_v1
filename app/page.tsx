@@ -1,5 +1,9 @@
-import { Hero } from '@/components/sections/Hero';
-import { Features } from '@/components/sections/Features';
+import { TimezoneHero } from '@/components/sections/TimezoneHero';
+import { LogoMarquee } from '@/components/sections/LogoMarquee';
+import { SelectWorkBlinds } from '@/components/sections/SelectWorkBlinds';
+import { ServicesGrid } from '@/components/sections/ServicesGrid';
+import { OriginStory } from '@/components/sections/OriginStory';
+import { TeamStats } from '@/components/sections/TeamStats';
 import { FounderBio } from '@/components/sections/FounderBio';
 import { ClientLogos } from '@/components/sections/ClientLogos';
 import { NewsletterCTA } from '@/components/sections/NewsletterCTA';
@@ -10,34 +14,28 @@ export default function HomePage() {
     <main>
       <PulseAccent />
 
-      <Hero
-        eyebrow=""
-        heading="We make products look legendary."
-        subheading="Social campaigns and product commercials for DTC and e-commerce brands. Content that stops the scroll and moves the needle."
-        primaryCta={{ label: 'See pricing', href: '/pricing' }}
-        secondaryCta={{ label: 'Get in touch', href: 'mailto:hello@dialedstudios.com' }}
-        stats={[
-          {
-            label: 'DTC-focused',
-            description: 'Built for brands that sell direct and scale fast.',
-          },
-          {
-            label: 'Platform-ready',
-            description: 'Optimized for TikTok, Meta, YouTube, and beyond.',
-          },
-          {
-            label: 'Conversion-driven',
-            description: 'Every frame engineered to drive action.',
-          },
-        ]}
-      />
+      {/* Jacob Media-style Timezone Hero */}
+      <TimezoneHero />
 
+      {/* Infinite scrolling logo marquee */}
+      <LogoMarquee />
+
+      {/* Select Work with blinds effect */}
+      <SelectWorkBlinds />
+
+      {/* Four-pillar services */}
+      <ServicesGrid />
+
+      {/* Origin story with three-step narrative */}
+      <OriginStory />
+
+      {/* Stats section with animated numbers */}
+      <TeamStats />
+
+      {/* Dock magnification logo carousel */}
       <ClientLogos />
 
-      <Features section="services" />
-
-      <Features section="signature" />
-
+      {/* Founder bio section */}
       <FounderBio />
 
       <NewsletterCTA />

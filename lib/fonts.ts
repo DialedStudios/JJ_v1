@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { Space_Grotesk, Inter, Playfair_Display } from 'next/font/google';
 
 // Gotham Black for hero headings
 export const gothamBlack = localFont({
@@ -7,6 +7,15 @@ export const gothamBlack = localFont({
   display: 'swap',
   variable: '--font-gotham',
   weight: '900',
+});
+
+// Playfair Display for editorial elegance (Jacob Media style)
+export const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
 });
 
 // Space Grotesk for display/headings fallback
