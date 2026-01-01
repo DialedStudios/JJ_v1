@@ -31,6 +31,12 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Large video files (upload directly to Vercel/CDN)
+public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.webm
+hero-reel/
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
