@@ -48,6 +48,31 @@ function TimeDisplay({ city, timezone }: { city: string; timezone: string }) {
 export function TimezoneHero() {
   return (
     <section className="timezone-hero">
+      {/* Background Video */}
+      <div className="timezone-hero__video-wrapper">
+        <video
+          className="timezone-hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/placeholder/hero-poster.jpg"
+        >
+          <source src="/videos/hero-reel.mp4" type="video/mp4" />
+        </video>
+        <div className="timezone-hero__video-overlay" />
+      </div>
+
+      {/* Main Title with Difference Blend Mode */}
+      <motion.h1
+        className="timezone-hero__brand"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      >
+        DIALED STUDIOS
+      </motion.h1>
+
       <div className="timezone-hero__times">
         {timezones.map((tz) => (
           <TimeDisplay key={tz.city} city={tz.city} timezone={tz.timezone} />
@@ -59,29 +84,18 @@ export function TimezoneHero() {
           className="timezone-hero__label"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           Creative Non-Agency
         </motion.span>
 
-        <motion.h1
-          className="timezone-hero__heading"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Social-first production
-          <br />
-          <em>for brands that move culture.</em>
-        </motion.h1>
-
         <motion.p
-          className="timezone-hero__subtext"
+          className="timezone-hero__tagline"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-          From concept to delivery, we create content that converts.
+          Social-first production for brands that move culture.
         </motion.p>
       </div>
 

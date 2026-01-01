@@ -752,15 +752,56 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 120px 40px 80px;
   position: relative;
+  overflow: hidden;
+}
+
+/* Background Video */
+.timezone-hero__video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.timezone-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timezone-hero__video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 7, 8, 0.3);
+  pointer-events: none;
+}
+
+/* Main Brand Title - Mix Blend Mode Difference */
+.timezone-hero__brand {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-gotham);
+  font-size: clamp(48px, 12vw, 160px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
 }
 
 .timezone-hero__times {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   gap: 60px;
-  margin-bottom: 80px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .timezone-display {
@@ -768,27 +809,31 @@ footer a:hover {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  mix-blend-mode: difference;
 }
 
 .timezone-display__city {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--muted);
+  color: #ffffff;
   font-weight: 600;
 }
 
 .timezone-display__time {
   font-family: var(--font-playfair);
   font-size: 14px;
-  color: var(--text);
+  color: #ffffff;
   letter-spacing: 0.05em;
 }
 
 .timezone-hero__content {
+  position: relative;
+  z-index: 2;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  mix-blend-mode: difference;
 }
 
 .timezone-hero__label {
@@ -796,30 +841,19 @@ footer a:hover {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--accent);
-  margin-bottom: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
-.timezone-hero__heading {
+.timezone-hero__tagline {
   font-family: var(--font-playfair);
-  font-size: clamp(42px, 8vw, 80px);
-  font-weight: 500;
-  line-height: 1.1;
-  margin: 0;
-  color: var(--text);
-}
-
-.timezone-hero__heading em {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 400;
   font-style: italic;
-  color: var(--muted);
-}
-
-.timezone-hero__subtext {
-  margin-top: 30px;
-  font-size: 16px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin: 0;
+  color: #ffffff;
 }
 
 .timezone-hero__scroll {
@@ -827,20 +861,22 @@ footer a:hover {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  color: var(--muted);
+  color: #ffffff;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  mix-blend-mode: difference;
 }
 
 .timezone-hero__scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
+  background: linear-gradient(to bottom, #ffffff, transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
